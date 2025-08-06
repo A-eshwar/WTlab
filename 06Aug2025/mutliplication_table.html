@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiplication Table</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1 align="center">Multiplication Table Portal</h1>
+        <div style="width: 300px; margin: 50px auto;">
+            <form align="center">
+                <label for="number">Enter a number:</label><br>
+                <input type="number" id="number" name="number" required style="width: 100%;"><br><br>
+                <button type="submit" onclick="generateMultiplicationTable(event)" style="width: 100%;">Generate Table</button>
+            </form>
+        </div>
+    </body>
+    <script>
+        function generateMultiplicationTable(event) {
+            event.preventDefault();
+            const number = document.getElementById("number").value;
+            let table = `<h2>Multiplication Table of ${number}</h2><ul>`;
+            for (let i = 1; i <= 10; i++) {
+                table += `<li>${number} x ${i} = ${number * i}</li>`;
+            }
+            table += `</ul>`;
+            document.write(table);
+        }
+    </script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Payment page</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="pay.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f0f0f0;
+                margin: 0;
+                padding: 0;
+            }
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            h1 {
+                color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">CVR PAYMENT PORTAL</h1>
+        <div style="width: 300px; margin: 50px auto;">
+            <form align="center">
+                <label for="cardName">Name on Card:</label><br>
+                <input type="text" id="cardName" name="cardName" style="width: 100%;"><br><br>
+                <label for="cardNumber">Card Number:</label><br>
+                <input type="text" id="cardNumber" name="cardNumber" maxlength="16" style="width: 100%;"><br><br>
+                <label for="expiry">Expiry Date:</label><br>
+                <input type="month" id="expiry" name="expiry" style="width: 100%;"><br><br>
+                <label for="cvv">CVV:</label><br>
+                <input type="password" id="cvv" name="cvv" maxlength="4" style="width: 100%;"><br><br>
+                <input type="submit" onclick="processPayment(event)"value="Pay Now" style="width: 100%;">
+                <p id="demo"></p>
+            </form>
+            <p align="center">Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </body>
+</html>

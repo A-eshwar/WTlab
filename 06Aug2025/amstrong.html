@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Armstrong Number Check</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1 align="center">Armstrong Number Check Portal</h1>
+        <div style="width: 300px; margin: 50px auto;">
+            <form align="center">
+                <label for="number">Enter a number:</label><br>
+                <input type="number" id="number" name="number" required style="width: 100%;"><br><br>
+                <button type="submit" onclick="checkArmstrongNumber(event)" style="width: 100%;">Check Armstrong</button>
+            </form>
+        </div>
+    </body>
+    <script>
+        function checkArmstrongNumber(event) {
+            event.preventDefault();
+            const number = document.getElementById("number").value;
+            const numLength = number.length;
+            let sum = 0;
+            for (let i = 0; i < numLength; i++) {
+                sum += Math.pow(number[i], numLength);
+            }
+            if (sum == number) {
+                document.write(`${number} is an Armstrong number.`);
+            } else {
+                document.write(`${number} is not an Armstrong number.`);
+            }
+        }
+    </script>
+</html>
